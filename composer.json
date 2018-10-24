@@ -1,0 +1,11 @@
+{
+    "name": "chiang/composer-lab-assets",
+    "type": "project",
+    "authors": [
+        {
+            "name": "江珮妤",
+            "email": "Luxgen077@gmail.com"
+        }
+    ],
+    "require": {}
+}
