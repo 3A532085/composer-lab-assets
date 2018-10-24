@@ -2,6 +2,13 @@
 
 require __DIR__.'/bootstrap.php';
 require './vendor/autoload.php';
+
+//date_default_timezone_set('Asia/Taipei');
+
+use Carbon\Carbon;
+Carbon::setLocale('zh-tw');
+
+
 // connect to dabase
 try {
     $dsn = 'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE.';charset='.DB_CHARSET;
@@ -81,7 +88,7 @@ try {
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">文章清單
-                    <small>{今日日期}</small>
+                    <small><?php echo Carbon::now()->toDateString(); ?></small>
                 </h1>
             </div>
         </div>
